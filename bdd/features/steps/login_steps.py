@@ -11,3 +11,11 @@ def realizar_login_valido(context):
 def verificar_login(context):
     context.swaglabs.login.validar_login_correto(context)
 
+@when(u'realizar login com "{tipo_erro}"')
+def realizar_login_invalido(context, tipo_erro):
+    context.swaglabs.login.efetuar_login_invalido(context, tipo_erro)
+
+
+@then(u'deve ser exibida a mensagem de erro "{mensagem}"')
+def verificar_erro_login(context, mensagem):
+    context.swaglabs.login.validar_login_incorreto(context, mensagem)

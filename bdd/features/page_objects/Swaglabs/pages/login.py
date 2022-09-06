@@ -24,3 +24,20 @@ class SwaglabsLogin():
         locator = context.page.locator(body_elements['CART_ICON'])
         expect(locator).to_be_visible()
 
+    def efetuar_login_invalido(self, context, tipo_erro):
+        if tipo_erro == "Username nao preenchido":
+            context.page.fill(login_elements['INP_USER'], "")   
+            context.page.fill(login_elements['INP_PASS'], "secret_sauce")
+            context.page.click(login_elements['BTN_LOGIN'])
+        elif tipo_erro == "Senha nao preenchida":
+            context.page.fill(login_elements['INP_USER'], "standard_user")   
+            context.page.fill(login_elements['INP_PASS'], "")
+            context.page.click(login_elements['BTN_LOGIN']) 
+        else:
+            context.page.fill(login_elements['INP_USER'], "7547544")   
+            context.page.fill(login_elements['INP_PASS'], "dsadsadsa")
+            context.page.click(login_elements['BTN_LOGIN']) 
+
+    def validar_login_incorreto(self, context, mensagem):
+        locator = context.page.locator(login_elements['ERROR_ALERT'])
+        expect(locator).to_have_text(mensagem)

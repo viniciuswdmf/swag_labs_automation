@@ -1,10 +1,32 @@
-<testsuite name="specs.login.Login no site de teste" tests="1" errors="0" failures="0" skipped="0" time="1.135874" timestamp="2022-08-30T10:06:00.043767" hostname="CTNDELLGMJCP63"><testcase classname="specs.login.Login no site de teste" name="Fazer login com sucesso" status="passed" time="1.135874"><system-out>
+<testsuite name="specs.login.Login no site de teste" tests="3" errors="0" failures="0" skipped="0" time="2.996003" timestamp="2022-09-06T09:45:33.382361" hostname="CTNDELLGMJCP63"><testcase classname="specs.login.Login no site de teste" name="Erro ao fazer login -- @1.1 " status="passed" time="1.539267"><system-out>
 <![CDATA[
 @scenario.begin
-  Cenário: Fazer login com sucesso
-    Dado que acesse o site ... passed in 0.855s
-    Quando realizar login com usuario e senha válidos ... passed in 0.260s
-    Então deve validar que o login foi realizado com sucesso ... passed in 0.021s
+  Esquema do Cenário: Erro ao fazer login -- @1.1 
+    Dado que acesse o site ... passed in 1.281s
+    Quando realizar login com "Username nao preenchido" ... passed in 0.235s
+    Então deve ser exibida a mensagem de erro "Epic sadface: Username is required" ... passed in 0.024s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="specs.login.Login no site de teste" name="Erro ao fazer login -- @1.2 " status="passed" time="0.947795"><system-out>
+<![CDATA[
+@scenario.begin
+  Esquema do Cenário: Erro ao fazer login -- @1.2 
+    Dado que acesse o site ... passed in 0.781s
+    Quando realizar login com "Senha nao preenchida" ... passed in 0.148s
+    Então deve ser exibida a mensagem de erro "Epic sadface: Password is required" ... passed in 0.019s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="specs.login.Login no site de teste" name="Erro ao fazer login -- @1.3 " status="passed" time="0.508941"><system-out>
+<![CDATA[
+@scenario.begin
+  Esquema do Cenário: Erro ao fazer login -- @1.3 
+    Dado que acesse o site ... passed in 0.328s
+    Quando realizar login com "Username ou senha incorretos" ... passed in 0.162s
+    Então deve ser exibida a mensagem de erro "Epic sadface: Username and password do not match any user in this service" ... passed in 0.019s
 
 @scenario.end
 --------------------------------------------------------------------------------
