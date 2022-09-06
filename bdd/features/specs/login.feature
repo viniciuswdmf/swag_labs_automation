@@ -9,9 +9,9 @@ Funcionalidade: Login no site de teste
 Contexto: Acessar o site no ambiente selecionado
     Dado que acesse o site
 
-# Cenário: Fazer login com sucesso
-#     Quando realizar login com usuario e senha válidos
-#     Então deve validar que o login foi realizado com sucesso
+Cenário: Fazer login com sucesso
+    Quando realizar login com usuario e senha válidos
+    Então deve validar que o login foi realizado com sucesso
 
 Esquema do Cenário: Erro ao fazer login
     Quando realizar login com "<tipo_erro>" 
