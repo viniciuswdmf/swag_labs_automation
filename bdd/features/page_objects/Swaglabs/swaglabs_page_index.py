@@ -7,3 +7,4 @@ class SwaglabsIndex():
     def __init__(self, context):
         self.commons = SwaglabsCommons(context)
         self.login = SwaglabsLogin(context)
+        self.home = SwaglabsHome(context)

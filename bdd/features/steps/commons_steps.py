@@ -5,7 +5,7 @@ import time
 def acesso_site(context):
     context.swaglabs.login.acessar_site_login(context)
 
-# @given(u'que esteja logado')
-# def estar_logado(context):
-#     context.swaglabs.login.acessar_site_login(context)
-#     context.swaglabs.login.fazer_login_com_parametros(context, "tarcisio@cy.com", "1")
+@given(u'que esteja logado')
+def estar_logado(context):
+    context.swaglabs.login.acessar_site_login(context)
+    context.swaglabs.login.efetuar_login_valido(context, "standard_user", "secret_sauce")    

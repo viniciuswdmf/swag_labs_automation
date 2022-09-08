@@ -1,0 +1,26 @@
+<testsuite name="specs.produto.Manipular produtos no site de teste" tests="2" errors="0" failures="0" skipped="0" time="3.412393" timestamp="2022-09-08T11:13:00.105985" hostname="CTNDELLGMJCP63"><testcase classname="specs.produto.Manipular produtos no site de teste" name="Adicionar ao carrinho" status="passed" time="1.990221"><system-out>
+<![CDATA[
+@scenario.begin
+  Cenário: Adicionar ao carrinho
+    Dado que acesse o site ... passed in 1.604s
+    E que esteja logado ... passed in 0.316s
+    Quando adicionar um produto ao carrinho ... passed in 0.046s
+    Então o icone do carrinho deve ser atualizado ... passed in 0.024s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="specs.produto.Manipular produtos no site de teste" name="Remover do carrinho" status="passed" time="1.422172"><system-out>
+<![CDATA[
+@scenario.begin
+  Cenário: Remover do carrinho
+    Dado que acesse o site ... passed in 0.850s
+    E que esteja logado ... passed in 0.284s
+    Dado que o produto tenha sido adicionado ao carrinho ... passed in 0.218s
+    Quando remover um produto do carrinho ... passed in 0.069s
+    Então o icone do carrinho deve ser zerado ... passed in 0.002s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
